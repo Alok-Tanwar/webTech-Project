@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css" />
+    <title>Payment Portal</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="image">
+        <h2 id="title">Payment</h2>
+      </div><br>
+      <label class="cards" >Accepted Cards</label><br><br>
+      <div>
+        <img src="photos/visa.png" height="30">
+        <img src="photos/masterc.jpg" height="30">
+        <img src="photos/amex.png" height="30">
+        <img src="photos/maestro.png" height="30">
+      </div>
+      <form class="form" id="form" action="confirmation.html">
+        <div class="input">
+          <label class="input_label">Name on Card</label>
+        </div>
+        <div class="input">
+          <input type="text" class="input_field" id="name" required />
+        </div>
+        <div class="input">
+          <label class="input_label">Credit Card Number</label>
+        </div>
+        <div class="input">
+          <input
+            type="tel"
+            class="input_field"
+            id="cardnum"
+            pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+            placeholder="1111-2222-3333-4444"
+            required
+          />
+        </div>
+        <div class="input">
+          <label class="input_label">Valid Thru</label>
+        </div>
+        <div class="input">
+          <input type="month" class="input-field" id="expdate" required />
+          <label class="input-label"></label>
+        </div>
+        <div class="input">
+          <label class="input_label">CVV</label>
+        </div>
+        <div class="input">
+          <input
+            type="password"
+            class="input_field"
+            id="cvv"
+            pattern=".{3}"
+            required
+          />
+        </div>
+        <button class="button">Pay and Continue</button>
+      </form>
+    </div>
+  </body>
+</html>
