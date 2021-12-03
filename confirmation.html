@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css" />
+    <title>Confirmation Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="image">
+        <h2 id="title">SAMA HOTELS</h2>
+      </div>
+      <form id="form">
+        <p id="msg">
+          Your booking was successful.<br />
+          Thank you for choosing SAMA Hotels.<br />
+          We look forward to see you again.
+          Redirecting....
+        </p>
+      </form>
+    </div>
+    <script>
+      let delay = setTimeout(function () {
+        window.location.href = "home.html";
+        window.clearTimeout(delay);
+      }, 3000);
+    </script>
+  </body>
+</html>

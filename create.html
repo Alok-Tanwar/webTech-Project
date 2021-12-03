@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css" />
+    <title>Ceate Account</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="image">
+        <h2 id="title">Create Your Account</h2>
+      </div>
+      <form class="form" id="form">
+        <div class="input">
+          <label class="input_label">Email</label>
+        </div>
+        <div class="input">
+          <input type="email" class="input_field" id="email" required />
+        </div>
+        <div class="input">
+          <label class="input_label">Password</label>
+        </div>
+        <div class="input">
+          <input
+            type="password"
+            class="input_field"
+            id="password"
+            pattern=".{8,20}"
+            title="Length should be 8-20 characters"
+            required
+          />
+        </div>
+        <button onclick="signUp()" class="button">Sign Up</button>
+      </form>
+      <div class="text">
+        <p>
+          By signing up you are agreeing to our <a href="#">TnC</a>
+          <br />Existing user?<a href="login.html">Sign In</a>
+        </p>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="firebase.js"></script>
+<script src="sign.js"></script>
+  </body>
+</html>

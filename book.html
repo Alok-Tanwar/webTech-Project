@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css" />
+    <title>Booking Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="image">
+        <h2 id="title">Book Your Destination</h2>
+      </div>
+      <form class="form" id="form">
+        <div class="input">
+          <label class="input_label">Name</label>
+        </div>
+        <div class="input">
+          <input type="text" class="input_field" id="name" required />
+        </div>
+        <div class="input">
+          <label class="input_label">Phone Number</label>
+        </div>
+        <div class="input">
+          <input type="tel" class="input_field" id="phone" pattern="[0-9]{10}" required />
+        </div>
+        <div class="input">
+          <label class="input_label">Hotel</label>
+        </div>
+        <div class="input">
+          <select type="Select" class="input_field" id="hotel" size="1" required>
+            <label class="input_label">
+              <option style="display: none"></option>
+              <option value="Taj Palace, Delhi">Taj Palace, Delhi</option>
+              <option value="The Lalit, Delhi">The Lalit, Delhi</option>
+              <option value="ITC Maurya, Delhi">ITC Maurya, Delhi</option>
+              <option value="Novotel, Mumbai">Novotel, Mumbai</option>
+              <option value="Trident Bandra Kurla, Mumbai">Trident Bandra Kurla, Mumbai</option>
+              <option value="Waterstones, Mumbai">Waterstones, Mumbai</option>
+              <option value="Bloomsuites Calangute, Goa">Bloomsuites Calangute, Goa</option>
+              <option value="Fairfield Arjuna, Goa">Fairfield Arjuna, Goa</option>
+              <option value="Sterling Goa Varca, Goa">Sterling Goa Varca, Goa</option>
+            </label>
+          </select>
+        </div>
+        <div class="input">
+          <label class="input_label">From:</label>
+        </div>
+        <div class="input">
+          <input type="date" class="input-field" id="start" required />
+          <label class="input-label"></label>
+        </div>
+        <div class="input">
+          <label class="input_label">To:</label>
+        </div>
+        <div class="input">
+          <input type="date" class="input-field" id="end" required />
+          <label class="input-label"></label>
+        </div>
+        <div class="input">
+        <label class="input_label">Number of Rooms</label>
+        </div>
+        <div class="input">
+          <input type="number" class="input-field" id="room" min="1" required />
+          <label class="input-label"></label>
+        </div>
+        <div class="input">
+          <label class="input_label">Plan</label>
+        </div>
+        <div class="input">
+          <select type="Select" class="input_field" id="plan" size="1" required>
+            <label class="input_label">
+              <option style="display: none"></option>
+              <option value="Premium">Premium</option>
+              <option value="Basic">Basic</option>
+            </label>
+          </select>
+        </div>
+        <button onclick="entry_data()" class="button">Continue to Payment</button>
+      </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="firebase.js"></script>
+<script src="bookdata.js">
+</script>
+  </body>
+</html>
